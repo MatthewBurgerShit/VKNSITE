@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js.js"></script>
+    <title>Расчёт</title>
+</head>
+<body>
+<header>
+    <img src="логотипчик.png" alt="Логотипчик" onclick="window.location.href='page1.html'">
+</header>
+<nav>
+    <ul>
+        <li><a href="page1.html">Главная</a></li>
+        <li><a href="page2.html">Информация про сноуборд</a></li>
+        <li><a href="page3.html">Расчёты</a></li>
+    </ul>
+</nav>
+<section>
+    <h1>Расчёты</h1>
+
+   
+     <label for="height">Введите ваш рост (см): </label>
+    <input type="number" id="height">
+    <br>
+    <label for="weight">Введите ваш вес (кг): </label>
+    <input type="number" id="weight">
+    <br>
+    <button onclick="calculateSnowboard()">Рассчитать</button>
+    <p>Жёсткость подходящей доски: <span id="result"></span></p>
+
+    <script>
+        function calculateSnowboard() {
+            // Получаем значения роста и веса из полей ввода
+            var height = document.getElementById('height').value;
+            var weight = document.getElementById('weight').value;
+            
+            // Предположим, что у нас есть какие-то формулы для расчёта жёсткости сноуборда
+            // На практике это могут быть более сложные расчёты, но для примера используем простые условия
+            var snowboardStiffness = "средняя"; // Здесь должен быть жёсткости на основе расчётов
+
+            // Выводим результат на страницу
+            document.getElementById('result').textContent = snowboardStiffness;
+        }
+    </script>
+    <form name="forma1">Укажите ваш пол:<br>
+        <input type="radio" name="sex" value="man" checked> мужской
+        <input type="radio" name="sex" value="woman"> женский
+    </form>
+
+    <form name="forma1">Какой стиль катания вас интересует?:
+        <select name="language" size="1">
+            <option selected value="Фрирайд">Фрирайд
+            <option value="Фристайл">Фристайл
+            <option value="Трассовое катание">Трассовое катание
+        </select><br><br>
+    </form>
+
+    <form name="forma1">
+        <label for="load">Выберите файл: </label>
+        <input type="file" name="load" size="30">
+    </form>
+</section>
+</body>
+</html>
